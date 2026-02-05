@@ -1,6 +1,7 @@
 package sait.mms.manager;
 
 import java.util.*;
+import java.io.*;
 
 import sait.mms.problemdomain.Movie;
 
@@ -11,9 +12,13 @@ public class MovieManager {
 	private Scanner keyboard = new Scanner(System.in);
 	private int option;
 	
+	
 	public MovieManager() {
 		loadMovieList();
+		//System.out.println(movies.get(1).toString()); // this is just a test
+		
 		displayMenu();
+
 		
 	}
 
@@ -56,18 +61,45 @@ public class MovieManager {
 		
 	}
 	
-	//Camille
+
 	private void generateRandomMovieList() {
 		
 	}
 	
-	//Camille
+
 	private void saveMovieListToFile() {
 		
 	}
 
 	private void loadMovieList() {
+		//finding the text file
+		File movieFile = new File("res/movies.txt");
+		Scanner fileScanner = null;
+		try {
+			fileScanner = new Scanner(movieFile);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 		
+		int duration;
+		String title = null;
+		int year;
 		
+		//looping though each line and turning it into a Movie Object
+		while (fileScanner.hasNextLine()) {
+			String movieText = fileScanner.nextLine();
+			//System.out.println(movieText);
+			
+			//splitting the text
+			String[] text = movieText.split(",");
+			duration = Integer.parseInt(text[0]);
+			title = text[1];
+			year = Integer.parseInt(text[2]);
+			
+			//creating and adding movie to the list
+			Movie movie = new Movie(duration,title,year);
+			movies.add(movie);
+		}
+
 	}
 }

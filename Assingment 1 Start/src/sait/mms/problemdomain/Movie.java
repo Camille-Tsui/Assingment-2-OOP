@@ -17,6 +17,7 @@ public class Movie {
 	}
 	
 	// public getter method (3)
+
 	public int getDuration() {
 		return duration;
 	}
