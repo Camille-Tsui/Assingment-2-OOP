@@ -145,7 +145,12 @@ public class MovieManager {
 	
 
 	private void saveMovieListToFile() {
-		
+		File movieFile = new File("res/movies.txt");
+		PrintWriter writer = new PrintWriter(movieFile);
+		for (Movie m : movies) {
+			writer.println(m.getDuration() + "," + m.getTitle() + "," + m.getYear());
+		}
+		writer.close();
 	}
 
 	private void loadMovieList() {
