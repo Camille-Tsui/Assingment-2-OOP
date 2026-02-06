@@ -124,7 +124,7 @@ public class MovieManager {
 	
 
 	private void generateRandomMovieList() {
-		System.out.print("\n Enter number of movies: ");
+		System.out.print("\nEnter number of movies: ");
 		int amount = Integer.parseInt(keyboard.nextLine());
 		
 		int totalDuration = 0;
