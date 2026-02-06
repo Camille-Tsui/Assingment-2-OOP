@@ -149,11 +149,19 @@ public class MovieManager {
 
 	private void saveMovieListToFile() {
 		File movieFile = new File("res/movies.txt");
-		PrintWriter writer = new PrintWriter(movieFile);
-		for (Movie m : movies) {
-			writer.println(m.getDuration() + "," + m.getTitle() + "," + m.getYear());
+		PrintWriter writer = null;
+		try{
+			writer = new PrintWriter(movieFile);
+			for (Movie m : movies) {
+				writer.println(m.getDuration() + "," + m.getTitle() + "," + m.getYear());
+			}
+		}catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			if (writer != null){
+				writer.close();
+			}
 		}
-		writer.close();
 	}
 
 	private void loadMovieList() {
