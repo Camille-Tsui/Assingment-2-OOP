@@ -19,29 +19,32 @@ public class MovieManager {
 	}
 
 	private void displayMenu() {
-		System.out.println("Movie Management system");
-		System.out.println("1\tAdd New Movie and Save");
-		System.out.println("2\tGenerate List of Movies Released in a Year");
-		System.out.println("3\tGenerate list of random Movies");
-		System.out.println("4\tExit");
+		int option = 0;
+		while(option != 4){
+			System.out.println("Movie Management system");
+			System.out.println("1\tAdd New Movie and Save");
+			System.out.println("2\tGenerate List of Movies Released in a Year");
+			System.out.println("3\tGenerate list of random Movies");
+			System.out.println("4\tExit");
 		
-		System.out.print("\nEnter an option: ");
-		int option = Integer.parseInt(keyboard.nextLine());
+			System.out.print("Enter an option: ");
+			option = Integer.parseInt(keyboard.nextLine());
 		
-		if (option == 1) {
-			addMovie();
-		}
-		else if (option == 2) {			
-			generateMovieListInYear();
-		}
-		else if (option == 3) {
-			generateRandomMovieList();			
-		}
-		else if (option == 4) {
-			saveMovieListToFile();			
-		}
-		else {
-			System.out.println("Invalid option!");
+			if (option == 1) {
+				addMovie();
+			}
+			else if (option == 2) {			
+				generateMovieListInYear();
+			}
+			else if (option == 3) {
+				generateRandomMovieList();			
+			}
+			else if (option == 4) {
+				saveMovieListToFile();			
+			}
+			else {
+				System.out.println("Invalid option!");
+			}
 		}
 	}
 	
