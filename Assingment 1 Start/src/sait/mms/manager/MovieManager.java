@@ -10,12 +10,10 @@ public class MovieManager {
 	//attributes
 	private ArrayList<Movie> movies = new ArrayList<>();
 	private Scanner keyboard = new Scanner(System.in);
-	private int option;
 	
 	
 	public MovieManager() {
 		loadMovieList();
-		//System.out.println(movies.get(1).toString()); // this is just a test
 		
 		displayMenu();
 	}
