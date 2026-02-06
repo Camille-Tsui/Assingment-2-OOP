@@ -47,7 +47,7 @@ public class MovieManager {
 		}
 	}
 	
-	//Lin
+
 	private void addMovie() {
 		int duration = 0;
 		int year = 0;
@@ -90,7 +90,7 @@ public class MovieManager {
 		System.out.println("Added movie to the data file.\n");
 	}
 	
-	//Lin
+
 	private void generateMovieListInYear() {
 		int inputYear = 0;
 
