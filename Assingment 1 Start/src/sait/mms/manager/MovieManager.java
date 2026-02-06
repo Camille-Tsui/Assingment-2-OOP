@@ -27,7 +27,7 @@ public class MovieManager {
 			System.out.println("3\tGenerate list of random Movies");
 			System.out.println("4\tExit");
 		
-			System.out.print("Enter an option: ");
+			System.out.print("\nEnter an option: ");
 			option = Integer.parseInt(keyboard.nextLine());
 		
 			if (option == 1) {
@@ -43,7 +43,7 @@ public class MovieManager {
 				saveMovieListToFile();			
 			}
 			else {
-				System.out.println("Invalid option!");
+				System.out.println("\nInvalid option!\n");
 			}
 		}
 	}
@@ -86,7 +86,7 @@ public class MovieManager {
 
 		movies.add(new Movie(duration, title, year));
 
-		System.out.println("\nSaving movies...");
+		System.out.println("Saving movies...");
 		saveMovieListToFile();
 		System.out.println("Added movie to the data file.\n");
 	}
@@ -106,7 +106,7 @@ public class MovieManager {
 			return;
 		}
 
-		System.out.println("\n\nMovie List\n");
+		System.out.println("\nMovie List");
 		System.out.println("Duration\tYear\tTitle");
 
 		int totalDuration = 0;
@@ -120,7 +120,7 @@ public class MovieManager {
 			}
 		}
 
-		System.out.println("\nTotal duration: " + totalDuration + " minutes\n");
+		System.out.println("Total duration: " + totalDuration + " minutes\n");
 	}
 	
 
@@ -142,7 +142,7 @@ public class MovieManager {
 			
 			totalDuration += randomMovie.getDuration();
 		}
-		System.out.println("\nTotal duration: " + totalDuration + " minutes");
+		System.out.println("\nTotal duration: " + totalDuration + " minutes\n");
 		
 	}
 	
