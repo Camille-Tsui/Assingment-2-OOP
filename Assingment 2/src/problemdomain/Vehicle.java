@@ -1,6 +1,7 @@
 package problemdomain;
 
 public abstract class Vehicle {
+	//variables
 	private long carID;
 	private String vehicleType;
 	private String subType;
@@ -10,6 +11,23 @@ public abstract class Vehicle {
 	private int year;
 	private String drivetrain;
 	private int price;
+	private int quality;
+	
+	//constructor
+	public Vehicle(long carID, String vehicleType, String subType, int speed, double fuel, int seats, int year,
+			String drivetrain, int price, int quality) {
+		super();
+		this.carID = carID;
+		this.vehicleType = vehicleType;
+		this.subType = subType;
+		this.speed = speed;
+		this.fuel = fuel;
+		this.seats = seats;
+		this.year = year;
+		this.drivetrain = drivetrain;
+		this.price = price;
+		this.quality = quality;
+	}
 	
 	public boolean isAvalible() {
 		return;
@@ -18,6 +36,7 @@ public abstract class Vehicle {
 	public void checkout() {
 		return;
 	}
+
 
 	@Override
 	public String toString() {
