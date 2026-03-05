@@ -25,7 +25,7 @@ public class VehicleManager {
 				Vehicle vehicle = null;
 				//System.out.println(line);
 				//System.out.println(vehicleType);
-				/*
+				
 				switch(vehicleType) // edit as needed
 				{
 					case "Hatchback":
@@ -45,7 +45,7 @@ public class VehicleManager {
 						break;
 				}
 				vehicles.add(vehicle);
-				*/
+				
 			}
 			input.close();
 		} catch (FileNotFoundException e) {
