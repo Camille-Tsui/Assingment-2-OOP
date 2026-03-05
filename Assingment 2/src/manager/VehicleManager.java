@@ -11,6 +11,7 @@ public class VehicleManager {
 	
 	public VehicleManager() {
 		loadVehicles();
+		displayMenu();
 	}
 
 	private void loadVehicles() {
@@ -24,7 +25,7 @@ public class VehicleManager {
 				Vehicle vehicle = null;
 				//System.out.println(line);
 				//System.out.println(vehicleType);
-				
+				/*
 				switch(vehicleType) // edit as needed
 				{
 					case "Hatchback":
@@ -44,6 +45,7 @@ public class VehicleManager {
 						break;
 				}
 				vehicles.add(vehicle);
+				*/
 			}
 			input.close();
 		} catch (FileNotFoundException e) {
@@ -53,7 +55,14 @@ public class VehicleManager {
 	}
 	
 	private void displayMenu() {
-		
+		System.out.println("Welcome to DriverMasters");
+		System.out.println("Please choose any option below");
+		System.out.println("--------------------------------");
+		System.out.println("1\tPurchase Vehicle");
+		System.out.println("2\tDisplay Vehicles by Type");
+		System.out.println("3\tDisplay Vehicles by Subtype");
+		System.out.println("4\tProduce a Random List of Vehicles");
+		System.out.println("5\tSave and Exit");
 	}
 	
 	private void purchaseVehicle() {
