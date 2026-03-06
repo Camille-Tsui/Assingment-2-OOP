@@ -24,5 +24,7 @@ public class Hybrid extends Vehicle{
 		}
 		this.electricRange = electricRange;
 	}
+	
+	//add toString and getters/setters
 
 }

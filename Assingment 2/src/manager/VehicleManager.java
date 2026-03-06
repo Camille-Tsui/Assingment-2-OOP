@@ -111,18 +111,17 @@ public class VehicleManager {
 		
 	}
 	
+	//This function is unfinished and needs to be fixed
 	private void displayVehiclesByType() {
 		System.out.print("Enter vehicle type to search for: (Sedan, SUV, Hatchback, Pickup Truck and Hybrid car) ");
 		String vehicleTypeName = keyboard.nextLine();
 		
 		for (Vehicle vehicle: vehicles) {
-			if(vehicle instanceof Hatchback) {
+			if(vehicle instanceof vehicleTypeName) {
 				System.out.println(vehicle.toString());
 				System.out.println();
 			}
-			
 		}
-		
 	}
 	
 	private void displayVehiclesBySubtype() {

@@ -20,17 +20,9 @@ public class Hatchback extends Vehicle{
 				this.hatchType = "Power Liftgate";
 				break;
 		}
-		this.hatchType = hatchType;
 	}
 
-	/*
-	@Override
-	public String toString() {
-		return "Hatchback [hatchType=" + hatchType + ", getCarID()=" + getCarID() + ", getVehicleType()="
-				+ getVehicleType() + ", getSubType()=" + getSubType() + ", getSpeed()=" + getSpeed() + ", getFuel()="
-				+ getFuel() + ", getSeats()=" + getSeats() + ", getYear()=" + getYear() + ", getDrivetrain()="
-				+ getDrivetrain() + ", getPrice()=" + getPrice() + ", getQuantity()=" + getQuantity() + "]";
-	}*/
+
 
 	@Override
 	public String toString() {
@@ -45,7 +37,6 @@ public class Hatchback extends Vehicle{
 				"\nPrice:\t\t" + getPrice() + 
 				"\nAvailable:\t\t" + getQuantity() + 
 				"\nHatch Type:\t" + getHatchType();
-		
 	}
 
 

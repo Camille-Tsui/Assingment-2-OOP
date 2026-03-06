@@ -23,5 +23,6 @@ public class PickupTruck extends Vehicle{
 		}
 		this.cargoCapacity = cargoCapacity;
 	}
-
+	
+	//add the toString and getters/setters
 }
