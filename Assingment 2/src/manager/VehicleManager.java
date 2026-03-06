@@ -8,40 +8,82 @@ import problemdomain.*;
 public class VehicleManager {
 	private ArrayList<Vehicle> vehicles = new ArrayList<>();
 	private String fileName = "res/vehicles.txt";
+	private Scanner keyboard = new Scanner(System.in);
 	
 	public VehicleManager() {
 		loadVehicles();
-		displayMenu();
+		
+		int option = 0;
+		
+		while (option != 5) {
+			displayMenu();
+			
+			System.out.print("\nEnter option: ");
+			option = keyboard.nextInt();
+			
+			switch (option)
+			{
+				case 1:
+					purchaseVehicle();
+					break;
+				case 2:
+					displayVehiclesByType();
+					break;
+				case 3:
+					displayVehiclesBySubtype();
+					break;
+				case 4:
+					produceRandomListOfVechicles();
+					break;
+				case 5:
+					save();
+					break;
+				default:
+					System.out.println("Invalid option!");
+					
+			}
+		}
 	}
+
 
 	private void loadVehicles() {
 		File file = new File(fileName);
 		try {
 			Scanner input = new Scanner(file);
+			
 			while (input.hasNext()) {
 				String line = input.nextLine();
-				String[] tokens = line.split(";");
-				String vehicleType = tokens[1];
+				String[] fields = line.split(";");
+				
+				long carId = Long.parseLong(fields[0]);
+				String vehicleType = fields[1];
+				String subType = fields[2];
+				int speed = Integer.parseInt(fields[3]);
+				double fuel = Double.parseDouble(fields[4]);
+				int seats = Integer.parseInt(fields[5]);
+				int year = Integer.parseInt(fields[6]);
+				String drivetrain = fields[7];
+				int price = Integer.parseInt(fields[8]);
+				int quality = Integer.parseInt(fields[9]);
+				
 				Vehicle vehicle = null;
-				//System.out.println(line);
-				//System.out.println(vehicleType);
 				
 				switch(vehicleType) // edit as needed
 				{
 					case "Hatchback":
-						vehicle = new Hatchback();
+						vehicle = new Hatchback(carId, vehicleType, subType, speed, fuel, seats, year, drivetrain, price, quality, fields[10]);
 						break;
 					case "Hybrid":
-						vehicle = new Hybrid();
+						vehicle = new Hybrid(carId, vehicleType, subType, speed, fuel, seats, year, drivetrain, price, quality, fields[10], Integer.parseInt(fields[11]));
 						break;
 					case "PickupTruck":
-						vehicle = new PickupTruck();
+						vehicle = new PickupTruck(carId, vehicleType, subType, speed, fuel, seats, year, drivetrain, price, quality, fields[10], Long.parseLong(fields[11]));
 						break;
 					case "Sedan":
-						vehicle = new Sedan();
+						//vehicle = new Sedan();
 						break;
 					case "SUV":
-						vehicle = new SUV();
+						//vehicle = new SUV();
 						break;
 				}
 				vehicles.add(vehicle);
@@ -69,7 +111,11 @@ public class VehicleManager {
 		
 	}
 	
-	private void dispayVehiclesBySubtype() {
+	private void displayVehiclesByType() {
+		
+	}
+	
+	private void displayVehiclesBySubtype() {
 		
 	}
 	
@@ -77,7 +123,7 @@ public class VehicleManager {
 		
 	}
 	
-	private void saveAndExit () {
+	private void save() {
 		
 	}
 }
