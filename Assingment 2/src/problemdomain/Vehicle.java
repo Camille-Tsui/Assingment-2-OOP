@@ -11,11 +11,11 @@ public abstract class Vehicle {
 	private int year;
 	private String drivetrain;
 	private int price;
-	private int quality;
+	private int quantity;
 	
 	//constructor
 	public Vehicle(long carID, String vehicleType, String subType, int speed, double fuel, int seats, int year,
-			String drivetrain, int price, int quality) {
+			String drivetrain, int price, int quantity) {
 		super();
 		this.carID = carID;
 		this.vehicleType = vehicleType;
@@ -26,21 +26,28 @@ public abstract class Vehicle {
 		this.year = year;
 		this.drivetrain = drivetrain;
 		this.price = price;
-		this.quality = quality;
+		this.quantity = quantity;
 	}
 	
 	public boolean isAvalible() {
-		return;
+		if (quantity > 0) {
+			return true;		
+		}
+		else {
+			return false;
+		}
 	}
 	
 	public void checkout() {
-		return;
+		if (isAvalible()) {
+			quantity -= 1;			
+		}
 	}
 
 
 	@Override
 	public String toString() {
-		return;
+		return "";
 	}
 	
 

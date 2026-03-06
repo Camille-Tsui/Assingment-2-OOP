@@ -6,8 +6,8 @@ public class PickupTruck extends Vehicle{
 	private long cargoCapacity;
 	
 	public PickupTruck(long carID, String vehicleType, String subType, int speed, double fuel, int seats, int year,
-			String drivetrain, int price, int quality, String cargoBed, long cargoCapacity) {
-		super(carID, vehicleType, subType, speed, fuel, seats, year, drivetrain, price, quality);
+			String drivetrain, int price, int quantity, String cargoBed, long cargoCapacity) {
+		super(carID, vehicleType, subType, speed, fuel, seats, year, drivetrain, price, quantity);
 		
 		switch(cargoBed)
 		{

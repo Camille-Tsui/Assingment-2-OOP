@@ -5,8 +5,8 @@ public class Hatchback extends Vehicle{
 	private String hatchType;
 	
 	public Hatchback(long carID, String vehicleType, String subType, int speed, double fuel, int seats, int year,
-			String drivetrain, int price, int quality, String hatchType) {
-		super(carID, vehicleType, subType, speed, fuel, seats, year, drivetrain, price, quality);
+			String drivetrain, int price, int quantity, String hatchType) {
+		super(carID, vehicleType, subType, speed, fuel, seats, year, drivetrain, price, quantity);
 		
 		switch (hatchType)
 		{
