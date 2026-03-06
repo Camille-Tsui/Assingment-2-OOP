@@ -49,6 +49,89 @@ public abstract class Vehicle {
 	public String toString() {
 		return "";
 	}
+
+	//getters and setters
+	public long getCarID() {
+		return carID;
+	}
+
+	public String getVehicleType() {
+		return vehicleType;
+	}
+
+	public String getSubType() {
+		return subType;
+	}
+
+	public int getSpeed() {
+		return speed;
+	}
+
+	public double getFuel() {
+		return fuel;
+	}
+
+	public int getSeats() {
+		return seats;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public String getDrivetrain() {
+		return drivetrain;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setCarID(long carID) {
+		this.carID = carID;
+	}
+
+	public void setVehicleType(String vehicleType) {
+		this.vehicleType = vehicleType;
+	}
+
+	public void setSubType(String subType) {
+		this.subType = subType;
+	}
+
+	public void setSpeed(int speed) {
+		this.speed = speed;
+	}
+
+	public void setFuel(double fuel) {
+		this.fuel = fuel;
+	}
+
+	public void setSeats(int seats) {
+		this.seats = seats;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	public void setDrivetrain(String drivetrain) {
+		this.drivetrain = drivetrain;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	
+	
 	
 
 }

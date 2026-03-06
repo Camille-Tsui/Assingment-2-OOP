@@ -22,5 +22,41 @@ public class Hatchback extends Vehicle{
 		}
 		this.hatchType = hatchType;
 	}
+
+	/*
+	@Override
+	public String toString() {
+		return "Hatchback [hatchType=" + hatchType + ", getCarID()=" + getCarID() + ", getVehicleType()="
+				+ getVehicleType() + ", getSubType()=" + getSubType() + ", getSpeed()=" + getSpeed() + ", getFuel()="
+				+ getFuel() + ", getSeats()=" + getSeats() + ", getYear()=" + getYear() + ", getDrivetrain()="
+				+ getDrivetrain() + ", getPrice()=" + getPrice() + ", getQuantity()=" + getQuantity() + "]";
+	}*/
+
+	@Override
+	public String toString() {
+		return "Car ID:\t\t" + getCarID() + 
+				"\nVehicle Type:" + getVehicleType() + 
+				"\nSub Type:\t" + getSubType() + 
+				"\nSpeed:\t\t" + getSpeed() +
+				"\nFuel:\t\t" + getFuel() +
+				"\nNumber of Seats:\t" + getSeats() +
+				"\nYear:\t\t" + getYear() + 
+				"\nDriveTrain:\t\t" + getDrivetrain() +
+				"\nPrice:\t\t" + getPrice() + 
+				"\nAvailable:\t\t" + getQuantity() + 
+				"\nHatch Type:\t" + getHatchType();
+		
+	}
+
+
+
+	public String getHatchType() {
+		return hatchType;
+	}
+
+	public void setHatchType(String hatchType) {
+		this.hatchType = hatchType;
+	}
+
 	
 }

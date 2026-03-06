@@ -112,6 +112,16 @@ public class VehicleManager {
 	}
 	
 	private void displayVehiclesByType() {
+		System.out.print("Enter vehicle type to search for: (Sedan, SUV, Hatchback, Pickup Truck and Hybrid car) ");
+		String vehicleTypeName = keyboard.nextLine();
+		
+		for (Vehicle vehicle: vehicles) {
+			if(vehicle instanceof Hatchback) {
+				System.out.println(vehicle.toString());
+				System.out.println();
+			}
+			
+		}
 		
 	}
 	
