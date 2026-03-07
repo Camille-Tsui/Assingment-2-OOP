@@ -47,7 +47,16 @@ public abstract class Vehicle {
 
 	@Override
 	public String toString() {
-		return "";
+		return "Car ID:\t\t" + carID +
+				"\nVehicle Type:\t" + vehicleType +
+				"\nSub Type:\t" + subType +
+				"\nSpeed:\t\t" + speed +
+				"\nFuel:\t\t" + fuel +
+				"\nNumber of Seats:\t" + seats +
+				"\nYear:\t\t" + year +
+				"\nDriveTrain:\t\t" + drivetrain +
+				"\nPrice:\t\t" + price +
+				"\nAvailable:\t\t" + quantity;
 	}
 
 	//getters and setters
@@ -130,8 +139,4 @@ public abstract class Vehicle {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	
-	
-	
-
 }

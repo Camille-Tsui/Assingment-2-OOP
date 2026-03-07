@@ -27,7 +27,7 @@ public class Hatchback extends Vehicle{
 	@Override
 	public String toString() {
 		return "Car ID:\t\t" + getCarID() + 
-				"\nVehicle Type:" + getVehicleType() + 
+				"\nVehicle Type:\t" + getVehicleType() + 
 				"\nSub Type:\t" + getSubType() + 
 				"\nSpeed:\t\t" + getSpeed() +
 				"\nFuel:\t\t" + getFuel() +

@@ -1,6 +1,6 @@
 package problemdomain;
 
-public class PickupTruck extends Vehicle{
+public class PickupTruck extends Vehicle {
 
 	private String cargoBed;
 	private long cargoCapacity;
@@ -21,8 +21,30 @@ public class PickupTruck extends Vehicle{
 				this.cargoBed = "Dump Bed";
 				break;
 		}
+		
 		this.cargoCapacity = cargoCapacity;
 	}
-	
-	//add the toString and getters/setters
+
+	@Override
+	public String toString() {
+	    return super.toString() +
+	            "\nCargo Capacity:\t" + cargoCapacity +
+	            "\nCargo Beds:\t" + cargoBed;
+	}
+
+	public String getCargoBed() {
+		return cargoBed;
+	}
+
+	public void setCargoBed(String cargoBed) {
+		this.cargoBed = cargoBed;
+	}
+
+	public long getCargoCapacity() {
+		return cargoCapacity;
+	}
+
+	public void setCargoCapacity(long cargoCapacity) {
+		this.cargoCapacity = cargoCapacity;
+	}
 }
